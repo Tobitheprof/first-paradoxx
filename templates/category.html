@@ -1,0 +1,27 @@
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
+    <!--Latest Flaschcards Section Start-->
+    <section id="mainfeed" class="text-center">
+        <div class="container-xl">
+            <div class="fw-bold">
+                <h2 class="fw-bold header-color">Flashcards on {{title}}</h2>
+            </div>
+            <div class="row justify-content-center">
+                {% for a in flashcard %}
+                <div class="col-lg-3 col-md-5 gedo2 mb-4 me-2 ms-2">
+                    <img src="{{a.featured_image.url}}" alt="" class="img-fluid mb-3 mt-2">
+                    <h3 class="header-color fw-bold text-start">{{a.title}}</h3>
+                    <p class="text-muted justice">{{a.description}}</p>
+                    <div class="zedda text-start">
+                        <a href="/detail/{{a.slug}}" class="btn btn-secondary">Read More</a>
+                        <p class="normal-text text-start mt-3"><i class="bi bi-person"></i> {{a.author}}</p>
+                    </div>
+                    <hr>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--Latest Flaschcards Section End-->
+    {% endblock %}

@@ -1,0 +1,100 @@
+    {% extends 'base2.html' %}
+    {% load static %}
+    {% block content %}
+    <!--Hero Section Start-->
+    <section id="hero">
+        <div class="container-lg  animate__animated animate__backInLeft" data-aos="fade-down">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 col-md-4">
+                    <h3 class="header-color">Learning Made Easy</h3>
+                    <p class="lead normal-text justice">Paradox is a tool that let's you learn just about anything with the help of well detailed flashcards that span across a wide range of different topics.</p>
+                    <a href="#" class="btn btn-secondary btn-custom">Get Started</a>
+                </div>
+                <div class="col-lg-6 col-md-4 d-none d-md-block">
+                    <img src="{% static 'assets/img/covid.png' %}" alt="Hero Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hero Section End-->
+
+    <!--Features Start-->
+    <section id="marketing" class="gedo" data-aos="fade-down">
+        <div class="container marketing">
+            <div class="text-center">
+                <h2 class="header-color">Features</h2>
+                <p class="text-muted">What Makes Paradox Unique?</p>
+            </div>
+    
+        <!-- Three columns of text below the carousel -->
+        <div class="row justify-content-center mb-2">
+
+            <div class="col-lg-3 gedo2 me-3 mb-2 p-4 shadow rounded-pill animate__animated animate__backInRight">
+                <i class="bi bi-speedometer custom"></i>
+                <h2 class="normal-text">Fast and Efficient</h2>
+                <p class="normal-text">Our Flashcards are designed to help you learn and memorize anything on any topic in the fastest and most efficient ways possible</p>
+                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-3 gedo2 me-3 mb-2 p-4 shadow rounded-pill animate__animated animate__backInRight">
+                <i class="bi bi-folder custom"></i>
+                <h2 class="normal-text">Organized</h2>
+                <p class="normal-text">Flashcards on Paradox are well organized making it easy to navigate through them</p>
+                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+
+            
+
+            <div class="col-lg-3 gedo2 me-3 mb-2 p-4 shadow rounded-pill animate__animated animate__backInRight">
+                <i class="bi bi-info-circle custom"></i>        
+                <h2 class="normal-text">Detailed</h2>
+                <p class="normal-text">Flashcards on Paradox are well detailed so as to give you a broad overview on any topic you wish to learn</p>
+                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+
+        </div><!-- /.row -->
+    </section>
+    <!--Features End-->
+
+    <!--Marketing Start-->
+    <section id="about">
+        <div class="container">
+            <!--Marketing Item Start-->
+            <div class="row featurette mb-4 justify-content-center align-items-center mt-3" data-aos="fade-down" data-aos-delay="300" data-aos-offset="0">
+                <div class="col-md-7 order-md-2 mt-5">
+                    <h2 class="featurette-heading header-color">What's Paradox? <span class="text-muted">What do I use it for?</span></h2>
+                    <p class="lead normal-text">Paardox is a simple web application that uses flashcards to provide an overview on any topic that you might be interested in learning about.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="{% static 'assets/img/gumball.png' %}" alt="image" class="img-fluid" width="500" height="500">
+                </div>
+            </div>
+            <!--Marketing Item End-->
+
+            <!--Marketing Item Start-->
+            <div class="row featurette mb-4 justify-content-center align-items-center mt-3" data-aos="fade-down" data-aos-delay="300" data-aos-offset="0">
+                <div class="col-md-7 mt-5">
+                    <h2 class="featurette-heading header-color">Why did you make Paradox? <span class="text-muted">And no, I'm not about to drop motivational text</span></h2>
+                    <p class="lead normal-text">Other than the obvious reason about me being Chad and Peak, I made Paradox to help students study better and faster with the help of well detailed flashcards that have extra resources attached to them for further learning.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{% static 'assets/img/R.png' %}" alt="image" width="500" height="500" class="img-fluid">
+                </div>
+            </div>
+            <!--Marketing Item End-->
+
+            <!--Marketing Item Start-->
+            <div class="row featurette mb-4 justify-content-center align-items-center mt-3" data-aos="fade-down" data-aos-delay="300" data-aos-offset="0">
+                <div class="col-md-7 order-md-2 mt-5">
+                    <h2 class="featurette-heading header-color">What's the purpose of Paradox? <span class="text-muted">It's quite simple</span></h2>
+                    <p class="lead normal-text">What is the purpose of anything? Well, for Paradox, it's purpose is to help people study better and wayyyyyyy more efficiently.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="{% static 'assets/img/okay.jpg' %}" alt="hdfhjdf" class="img-fluid">
+                </div>
+            </div>
+            <!--Marketing Item End-->
+        </div>
+    </section>
+    <!--Marketing End-->
+    {% endblock %}

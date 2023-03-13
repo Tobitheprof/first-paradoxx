@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<section id="detail">
+		<div class="container-lg">
+			<div class="row justify-content-center align-items-center">
+				<div class="text-center">
+					<h3 class="header-color">{{title}}</h3>
+				</div>
+				<div class="col-lg-6 col-md-5 mx-3 my-5 kurama p-4">
+				<!-- Slider main container -->
+					<div class="swiper">
+					  <!-- Additional required wrapper -->
+					  <div class="swiper-wrapper">
+					    <!-- Start of Slides -->
+					    {% for w in flashcard.slide_set.all %}
+					    <div class="swiper-slide">
+					    	<h4 class="header-color">{{w.title}}</h4>
+					    	<p class="normal-text">{{w.description}}</p>
+					    </div>
+					    {% endfor %}
+					    <!-- End of Slides -->
+					  </div>
+					  <!-- If we need navigation buttons -->
+					  <div class="swiper-button-prev"></div>
+					  <div class="swiper-button-next"></div>
+					  <!-- end -->
+					</div>
+				</div>
+	        </div>
+		</div>
+	</section>
+{% endblock %}

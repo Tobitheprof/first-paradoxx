@@ -1,0 +1,120 @@
+*{
+    font-family: Poppins;
+}
+body{
+    background-color: #23263A;
+}
+.gedo{
+    background-color: #212336;
+}
+.rounded{
+    border-radius: 300px !important;
+}
+.header-color{
+    color: #ff3240;
+}
+.normal-text{
+    color: whitesmoke;
+}
+input[type=text]{
+    background-color: #212336;
+    border: 1px solid #ff3240;
+    border-radius: 30px;
+    color: whitesmoke;
+    height: 50px;
+}
+input[type=text]:focus{
+    background-color: #212336;
+    border: 1px #212336;
+    color: whitesmoke;
+    border: 1px solid #ff3240;
+    border-radius: 30px;
+    height: 50px;
+    box-shadow: none;
+}
+input[type=password]{
+    border: 1px solid #ff3240;
+    background-color: #212336;
+    border-radius: 30px;
+    height: 50px;
+    box-shadow: none;
+    color: whitesmoke;
+
+
+}
+input[type=password]:focus{
+    background-color: #212336;
+    border: 1px solid #ff3240;
+    color: whitesmoke;
+    border-radius: 30px;
+    height: 50px;
+    box-shadow: none;
+
+}
+input[type=email]{
+    border: 1px solid #ff3240;
+    background-color: #212336;
+    border-radius: 30px;
+    color: whitesmoke;
+    height: 50px;
+    box-shadow: none;
+
+}
+input[type=email]:focus{
+    background: 1px #212336;
+    border: 1px solid #ff3240;
+    color: whitesmoke;
+    border-radius: 30px;
+    height: 50px;
+    box-shadow: none;
+
+}
+input[type=search]{
+    background-color: #1c1f32 !important;
+    color: whitesmoke !important;
+    border: #212336;
+}
+input[type=search]:focus{
+    box-shadow: none;
+}
+.haha{
+    color: white;
+}
+.input-group-text{
+    background-color: #1c1f32 !important;
+    border: #212336 !important;
+}
+.btn{
+    background-color: #ff3240;
+    border: none;
+}
+.btn:hover{
+    background-color: #f80f1f;
+}
+.btn-custom{
+    width: 300px;
+    border-radius: 30px;
+}
+.navbar-toggler{
+    border: none !important;
+}
+.navbar-toggler:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+.justice{
+    text-align: justify;
+}
+.gedo2{
+    background-color: #1c1f32 !important;
+    border-radius: 50px !important;
+}
+.inout-group-text{
+    background: #23263A !important;
+}
+.kurama{
+    background: #1c1f32 !important;
+}
+p{
+    word-wrap: break-word;
+}

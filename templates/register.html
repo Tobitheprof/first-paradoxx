@@ -1,0 +1,56 @@
+    {% extends 'base2.html' %}
+    {% load static %}
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    {% endblock css %}
+    {% block content %}
+    <section id="login" class="">
+        <div class="container-fluid vh-50" style="margin-top:100px">
+            <div class="" style="margin-top:50px">
+                <div class="rounded d-flex justify-content-center">
+                    <div class="col-md-4 col-sm-12 shadow-lg p-5">
+                        <div class="text-center">
+                            <h3 class="header-color">Register</h3>
+                            <p class="normal-text">Learn just about anything with flashcards that are well detailed and are curated by industry professionals</p>
+                            {% if messages %}
+                            {% for message in messages %}
+                            <p class="header-color">{{message}}</p>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                        <form  method="POST">
+                            {% csrf_token %}
+                            <div class="p-4">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="First Name" name="first_name">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Last Name" name="last_name">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address" name="email">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Username" name="username">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="password" class="form-control" placeholder="Password" name="password">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="password" class="form-control" placeholder="Confirm Password" name="password2">
+                                </div>
+                                <button class="btn btn-secondary text-center mt-2 btn-custom" type="submit">
+                                    Register
+                                </button>
+                                <p class="text-center mt-5 normal-text">Already have an account?
+                                    <a href="login.html" style="text-decoration: none;"><span class="text-primary">Login</span></a>
+                                </p>
+                                <a href="#"  style="text-decoration: none;"><p class="text-center text-primary">Forgot your password?</p></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

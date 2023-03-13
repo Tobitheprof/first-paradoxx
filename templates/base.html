@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/package/swiper.min.css' %}"/>
+    <title>Paradox | {{title}}</title>
+    <style>
+        section{
+            padding: 60px 0;
+        }
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!--Nav Bar Start-->
+    <nav class="navbar navbar-expand-md navbar-dark gedo animate__animated animate__backInLeft">
+        <div class="container-lg">
+            <a href="#" class="navbar-brand">
+                <i class="bi bi-book-half"></i>
+                Paradox
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Support Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sidebar" class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Become an admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Log Out</a>
+                    </li>
+                    <li class="nav-item gedo">
+                        <div class="nav-link">
+                            <div class="input-group input-group-sm flex-nowrap">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search haha"></i>
+                                </span>
+                                <form method="GET">
+                                    <input type="search" class="form-control no-wrap" placeholder="Search for a topic">
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Nav End-->
+
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!--Offcanvas Start--> 
+    <div class="offcanvas offcanvas-start gedo" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title header-color fw-bold" id="sidebar-label">Categories</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <a href="{% url 'science' %}" style="color: whitesmoke; text-decoration: none;"><p class="lead ms-3"><i class="bi bi-flask me-2"></i>Science</p></a>
+            <a href="{% url 'art' %}" style="color: whitesmoke; text-decoration: none;"><p class="lead ms-3"><i class="bi bi-briefcase me-2"></i>Art</p></a>
+            <a href="{% url 'history' %}" style="color: whitesmoke; text-decoration: none;"><p class="lead ms-3"><i class="bi bi-book me-2"></i>History</p></a>
+            <a href="{% url 'business' %}" style="color: whitesmoke; text-decoration: none;"><p class="lead ms-3"><i class="bi bi-check-all me-2"></i>Business</p></a>
+            <a href="{% url 'technology' %}" style="color: whitesmoke; text-decoration: none;"><p class="lead ms-3"><i class="bi bi-award me-2"></i>Technology</p></a>
+            <a href="#" style="color: whitesmoke; text-decoration: none;"><p class="lead ms-3"><i class="bi bi-briefcase-fill me-2"></i>History</p></a>
+        </div>
+        
+        <div class="offcanvas-footer">
+            <a href="{% url 'logout' %}" style="text-decoration: none; color: black;"><p class="lead ms-3"><i class="bi bi-box-arrow-left me-2"></i><span style="color: red;">Logout</span></p></a>
+        </div>
+
+    </div>
+    <!--Offcanvas End-->
+
+    <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/package/swiper-bundle.js' %}"></script>
+    <script type="text/javascript">
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'vertical',
+          loop: true,
+
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        });
+    </script>
+</body>
+</html>
